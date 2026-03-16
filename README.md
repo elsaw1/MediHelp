@@ -1,32 +1,52 @@
 # Medihelp
 
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" alt="Flutter">
+  <img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white" alt="Dart">
+  <img src="https://img.shields.io/badge/Platform-Android%20%7C%20iOS-brightgreen?style=flat-square" alt="Platform">
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square" alt="License">
+</p>
 
 ## About
 
-Medihelp is your personal health assistant that helps you manage medications, track health metrics, and maintain a healthy lifestyle. Built with Flutter, this cross-platform mobile application demonstrates modern mobile development practices for healthcare solutions.
+**Medihelp** is a comprehensive mobile health assistant designed to help users manage their healthcare journey effectively. Built with Flutter, this cross-platform application combines essential health management tools with an intuitive user interface.
 
 ### Key Features
-- 💊 **Medication Reminders** - Never miss your medications with smart notifications
-- 📊 **Health Tracking** - Monitor symptoms, mood, and daily activities
-- 🏥 **Appointment Manager** - Keep all your medical appointments organized
-- 💡 **Health Tips** - Daily wellness advice and health information
-- 📞 **Emergency Contacts** - Quick access to important numbers
 
-### Purpose
-Developed as a final project for the Mobile Programming course, showcasing Flutter development with clean architecture and responsive UI design.
+| Feature | Description |
+|---------|-------------|
+| **Medication Reminders** | Set customizable reminders for medications with notifications |
+| **Health Journal** | Track daily symptoms, mood, and health metrics |
+| **Appointment Scheduler** | Manage doctor appointments and get reminders |
+| **Health Tips** | Daily wellness tips and health education content |
+| **Emergency Ready** | Quick access to emergency contacts and first aid info |
 
-### Built With
-- [Flutter](https://flutter.dev/) - UI framework
-- [Dart](https://dart.dev/) - Programming language
-- [Provider](https://pub.dev/packages/provider) - State management
-- [SQLite](https://www.sqlite.org/) - Local database
+### Project Goals
 
-## 🏷️ Tags
-`flutter` `mobile-app` `health` `healthcare` `medication-reminder` `android` `ios` `dart` `cross-platform` `wellness`
+- Create a user-friendly health management tool accessible to everyone
+- Implement clean Flutter architecture with separation of concerns
+- Demonstrate practical mobile development skills
+- Provide real value for daily health management
 
-## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### Technology Stack
+
+- **Framework:** Flutter (SDK)
+- **Language:** Dart
+- **State Management:** [Provider](https://pub.dev/packages/provider) / [Riverpod](https://pub.dev/packages/riverpod)
+- **Local Storage:** SQLite / [SharedPreferences](https://pub.dev/packages/shared_preferences)
+- **Notifications:** [Flutter Local Notifications](https://pub.dev/packages/flutter_local_notifications)
+- **API Integration:** [Dio](https://pub.dev/packages/dio) / [HTTP](https://pub.dev/packages/http)
+
+## Getting Started
+
+### Prerequisites
+- Flutter SDK (^3.0.0)
+- Dart SDK (^3.0.0)
+- Android Studio / VS Code
+- Git
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/medihelp.git
