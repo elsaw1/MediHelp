@@ -11,15 +11,18 @@
 
 **Medihelp** is a comprehensive mobile health assistant designed to help users manage their healthcare journey effectively. Built with Flutter, this cross-platform application combines essential health management tools with an intuitive user interface.
 
-### Key Features
+### Fitur Aplikasi
 
-| Feature | Description |
-|---------|-------------|
-| **Medication Reminders** | Set customizable reminders for medications with notifications |
-| **Health Journal** | Track daily symptoms, mood, and health metrics |
-| **Appointment Scheduler** | Manage doctor appointments and get reminders |
-| **Health Tips** | Daily wellness tips and health education content |
-| **Emergency Ready** | Quick access to emergency contacts and first aid info |
+| No | Fitur | Deskripsi | Halaman Utama |
+|:--:|-------|-----------|---------------|
+| 1 | **Beranda** | Dashboard utama menampilkan ringkasan informasi, menu cepat, dan jadwal obat hari ini | `home_page.dart` |
+| 2 | **Jadwal Pengingat Obat** | Mengatur jadwal minum obat dengan notifikasi pengingat | `schedule_page.dart` |
+| 3 | **Riwayat Obat** | Mencatat dan menampilkan history konsumsi obat | `history_page.dart` |
+| 4 | **Fasilitas Kesehatan Terdekat** | Mencari rumah sakit, klinik, dan apotek terdekat dengan Google Maps | `nearby_page.dart` |
+| 5 | **Antrian Online** | Mengambil dan memantau antrian online di fasilitas kesehatan | `queue_page.dart` |
+| 6 | **Autentikasi** | Login, register, dan manajemen akun pengguna | `login_page.dart` |
+
+---
 
 ### Project Goals
 
