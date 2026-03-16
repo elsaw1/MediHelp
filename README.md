@@ -1,6 +1,6 @@
 # Medihelp
 
-<p align="center">
+<p align="left">
   <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" alt="Flutter">
   <img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white" alt="Dart">
   <img src="https://img.shields.io/badge/Platform-Android%20%7C%20iOS-brightgreen?style=flat-square" alt="Platform">
@@ -33,7 +33,7 @@
 - **Framework:** Flutter (SDK)
 - **Language:** Dart
 - **State Management:** [Provider](https://pub.dev/packages/provider) / [Riverpod](https://pub.dev/packages/riverpod)
-- **Local Storage:** SQLite / [SharedPreferences](https://pub.dev/packages/shared_preferences)
+- **Local Storage:** MySQL / [SharedPreferences](https://pub.dev/packages/shared_preferences)
 - **Notifications:** [Flutter Local Notifications](https://pub.dev/packages/flutter_local_notifications)
 - **API Integration:** [Dio](https://pub.dev/packages/dio) / [HTTP](https://pub.dev/packages/http)
 
