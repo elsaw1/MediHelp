@@ -37,6 +37,162 @@
 - **Notifications:** [Flutter Local Notifications](https://pub.dev/packages/flutter_local_notifications)
 - **API Integration:** [Dio](https://pub.dev/packages/dio) / [HTTP](https://pub.dev/packages/http)
 
+## Project Structure
+
+Berikut adalah struktur folder aplikasi Medihelp:
+```
+lib/
+├── main.dart
+├── core/
+│   ├── constants/
+│   │   ├── app_strings.dart           # Semua teks
+│   │   ├── app_colors.dart            # Warna tema
+│   │   └── api_endpoints.dart         # URL API (Google Maps, RS, dll)
+│   ├── theme/
+│   │   └── app_theme.dart             # Tema aplikasi
+│   ├── utils/
+│   │   ├── date_formatter.dart        # Format tanggal untuk jadwal
+│   │   ├── location_helper.dart       # Bantuan lokasi (GPS)
+│   │   └── validators.dart            # Validasi input
+│   └── widgets/
+│       ├── custom_app_bar.dart        # App bar kustom
+│       ├── loading_widget.dart        # Indikator loading
+│       ├── error_widget.dart          # Tampilan error
+│       └── empty_state_widget.dart    # Tampilan data kosong
+│
+├── features/
+│   ├── home/                          # FITUR 1: BERANDA
+│   │   ├── presentation/
+│   │   │   ├── pages/
+│   │   │   │   └── home_page.dart     # Halaman utama
+│   │   │   └── widgets/
+│   │   │       ├── greeting_card.dart # Sapaan pengguna
+│   │   │       ├── quick_action_grid.dart # Grid menu cepat
+│   │   │       ├── today_schedule_card.dart # Ringkasan jadwal hari ini
+│   │   │       └── health_tip_widget.dart # Tips kesehatan
+│   │   └── providers/
+│   │       └── home_provider.dart
+│   │
+│   ├── medication_schedule/            # FITUR 2: JADWAL PENGINGAT OBAT
+│   │   ├── presentation/
+│   │   │   ├── pages/
+│   │   │   │   ├── schedule_page.dart     # Daftar jadwal
+│   │   │   │   ├── add_schedule_page.dart # Tambah jadwal
+│   │   │   │   └── edit_schedule_page.dart # Edit jadwal
+│   │   │   └── widgets/
+│   │   │       ├── schedule_card.dart     # Card jadwal
+│   │   │       ├── time_picker.dart       # Pilih waktu
+│   │   │       └── repeat_option.dart     # Opsi pengulangan
+│   │   ├── domain/
+│   │   │   ├── models/
+│   │   │   │   └── medication_schedule.dart # Model jadwal
+│   │   │   └── repositories/
+│   │   │       └── schedule_repository.dart
+│   │   └── data/
+│   │       ├── repositories/
+│   │       │   └── schedule_repository_impl.dart
+│   │       └── datasources/
+│   │           ├── local_schedule_datasource.dart  # DB SQLite
+│   │           └── notification_service.dart       # Notifikasi
+│   │
+│   ├── medication_history/              # FITUR 3: RIWAYAT OBAT
+│   │   ├── presentation/
+│   │   │   ├── pages/
+│   │   │   │   ├── history_page.dart       # Daftar riwayat
+│   │   │   │   └── history_detail_page.dart # Detail riwayat
+│   │   │   └── widgets/
+│   │   │       ├── history_card.dart       # Card riwayat
+│   │   │       ├── calendar_view.dart      # Tampilan kalender
+│   │   │       └── filter_widget.dart      # Filter tanggal
+│   │   ├── domain/
+│   │   │   ├── models/
+│   │   │   │   └── medication_history.dart # Model riwayat
+│   │   │   └── repositories/
+│   │   │       └── history_repository.dart
+│   │   └── data/
+│   │       ├── repositories/
+│   │       │   └── history_repository_impl.dart
+│   │       └── datasources/
+│   │           └── local_history_datasource.dart
+│   │
+│   ├── nearby_healthcare/                # FITUR 4: FASILITAS KESEHATAN TERDEKAT
+│   │   ├── presentation/
+│   │   │   ├── pages/
+│   │   │   │   ├── nearby_page.dart         # Peta & daftar
+│   │   │   │   └── facility_detail_page.dart # Detail fasilitas
+│   │   │   └── widgets/
+│   │   │       ├── map_view.dart            # Google Maps
+│   │   │       ├── facility_card.dart       # Card fasilitas
+│   │   │       ├── filter_facility.dart     # Filter (RS, Klinik, Apotek)
+│   │   │       └── distance_badge.dart      # Jarak dari lokasi
+│   │   ├── domain/
+│   │   │   ├── models/
+│   │   │   │   └── healthcare_facility.dart # Model fasilitas
+│   │   │   └── repositories/
+│   │   │       └── facility_repository.dart
+│   │   └── data/
+│   │       ├── repositories/
+│   │       │   └── facility_repository_impl.dart
+│   │       └── datasources/
+│   │           ├── google_maps_service.dart  # Google Maps API
+│   │           └── location_service.dart     # GPS service
+│   │
+│   ├── online_queue/                      # FITUR 5: ANTRIAN ONLINE
+│   │   ├── presentation/
+│   │   │   ├── pages/
+│   │   │   │   ├── queue_page.dart          # Daftar antrian
+│   │   │   │   ├── take_queue_page.dart     # Ambil antrian
+│   │   │   │   ├── my_queue_page.dart       # Antrian saya
+│   │   │   │   └── queue_detail_page.dart   # Detail antrian
+│   │   │   └── widgets/
+│   │   │       ├── queue_card.dart          # Card antrian
+│   │   │       ├── queue_status.dart        # Status antrian
+│   │   │       ├── estimated_time.dart      # Estimasi waktu
+│   │   │       └── qr_code_widget.dart      # QR Code untuk antrian
+│   │   ├── domain/
+│   │   │   ├── models/
+│   │   │   │   ├── queue.dart               # Model antrian
+│   │   │   │   └── hospital.dart            # Model rumah sakit
+│   │   │   └── repositories/
+│   │   │       └── queue_repository.dart
+│   │   └── data/
+│   │       ├── repositories/
+│   │       │   └── queue_repository_impl.dart
+│   │       └── datasources/
+│   │           ├── remote_queue_datasource.dart # API antrian
+│   │           └── local_queue_datasource.dart  # Cache
+│   │
+│   └── auth/                               # FITUR TAMBAHAN: LOGIN/REGISTER
+│       ├── presentation/
+│       │   ├── pages/
+│       │   │   ├── login_page.dart
+│       │   │   ├── register_page.dart
+│       │   │   └── forgot_password_page.dart
+│       │   └── widgets/
+│       │       └── auth_form.dart
+│       ├── domain/
+│       │   ├── models/
+│       │   │   └── user.dart
+│       │   └── repositories/
+│       │       └── auth_repository.dart
+│       └── data/
+│           ├── repositories/
+│           │   └── auth_repository_impl.dart
+│           └── datasources/
+│               ├── remote_auth_datasource.dart
+│               └── local_auth_datasource.dart
+│
+├── services/                              # Layanan Global
+│   ├── notification_service.dart          # Push notifications
+│   ├── location_service.dart              # Layanan lokasi
+│   ├── database_service.dart              # SQLite service
+│   └── api_service.dart                   # API client
+│
+└── models/                                # Global models
+    └── user.dart
+```
+
+
 ## Getting Started
 
 ### Prerequisites
